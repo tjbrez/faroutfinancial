@@ -1,16 +1,18 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { TransportOptions } from 'nodemailer';
 
-// Add this line to mark the route as dynamic
 export const dynamic = 'force-dynamic';
 
-const transporter = nodemailer.createTransport({
+const transportOptions: TransportOptions = {
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_APP_PASSWORD
   }
-});
+};
+
+const transporter = nodemailer.createTransport(transportOptions);
 
 export async function POST(request: Request) {
   try {
@@ -18,7 +20,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.ADMIN_EMAIL, // Your email address
+      to: process.env.ADMIN_EMAIL,
       subject: 'New Waitlist Signup!',
       text: `New signup for Far Out Financial waitlist: ${email}`,
       html: `
@@ -29,7 +31,6 @@ export async function POST(request: Request) {
     };
 
     await transporter.sendMail(mailOptions);
-
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Waitlist email error:', error);
