@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { TransportOptions } from 'nodemailer';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 export const dynamic = 'force-dynamic';
 
-const transportOptions: TransportOptions = {
+const transportOptions: SMTPTransport.Options = {
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
