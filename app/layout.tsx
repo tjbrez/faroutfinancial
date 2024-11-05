@@ -17,10 +17,47 @@ const poppins = Poppins({
   display: "swap",
 });
 
+
 export const metadata: Metadata = {
-  title: 'Far Out Financial - Catch the Wave to Financial Freedom',
-  description: 'Use the three bucket strategy to manage your savings and investments',
-};
+  title: {
+    default: 'Far Out Financial | Modern Three Bucket Strategy',
+    template: '%s | Far Out Financial'
+  },
+  description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy. Join our waitlist for early access.",
+  keywords: ['financial planning', 'three bucket strategy', 'money management', 'retirement planning', 'personal finance'],
+  openGraph: {
+    title: 'Far Out Financial | Modern Three Bucket Strategy',
+    description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy.",
+    url: 'https://faroutfinancial.com',
+    siteName: 'Far Out Financial',
+    images: [
+      {
+        url: 'https://faroutfinancial.com/images/background.jpg',
+        width: 1200,
+        height: 630,
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Far Out Financial | Modern Three Bucket Strategy',
+    description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy.",
+    images: ['https://faroutfinancial.com/images/background.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default function RootLayout({
   children,
