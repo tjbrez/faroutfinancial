@@ -188,7 +188,7 @@ export default function Privacy() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="bg-[#f5e6d3]/90 backdrop-blur-sm rounded-lg p-8 max-w-4xl mx-auto">
-          <h1 className="font-pacifico text-4xl text-[#2a9d8f] mb-6">Privacy Policy</h1>
+          <h1 className="font-original-surfer text-4xl text-[#2a9d8f] mb-6">Privacy Policy</h1>
           <p className="text-sm text-[#2a9d8f]/70 mb-8">Last updated November 5, 2024</p>
 
           <div className="prose prose-lg max-w-none text-[#2a9d8f]/80">
@@ -199,7 +199,7 @@ export default function Privacy() {
 
             {/* Key Points */}
             <div className="bg-[#2a9d8f]/10 p-6 rounded-lg mb-8">
-              <h2 className="font-pacifico text-2xl text-[#2a9d8f] mb-4">Summary of Key Points</h2>
+              <h2 className="font-original-surfer text-2xl text-[#2a9d8f] mb-4">Summary of Key Points</h2>
               <div className="space-y-4">
                 {keyPoints.map((point, index) => (
                   <div key={index} className="border-l-4 border-[#ff7e45]/50 pl-4">
@@ -213,7 +213,7 @@ export default function Privacy() {
             {/* Main Sections */}
             {privacySections.map((section, index) => (
               <div key={index} className="mb-8">
-                <h2 className="font-pacifico text-2xl text-[#2a9d8f] mb-4">{section.title}</h2>
+                <h2 className="font-original-surfer text-2xl text-[#2a9d8f] mb-4">{section.title}</h2>
                 {section.content.map((content, contentIndex) => (
                   <div key={contentIndex} className="mb-4">
                     {content.subtitle && (

@@ -17,7 +17,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        pacifico: ['var(--font-pacifico)'],
+        originalSurfer: ['var(--font-original-surfer)'],
         poppins: ['var(--font-poppins)'],
       },
       colors: {

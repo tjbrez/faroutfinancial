@@ -53,21 +53,21 @@ export default function Home() {
             <SunMedium className="text-white w-10 h-10" />
             <TreePalm className="text-white w-8 h-8" />
           </div>
-          <h1 className="font-pacifico text-7xl text-white mb-4 drop-shadow-lg">
+          <h1 className="font-original-surfer text-7xl text-white mb-4 drop-shadow-lg">
             Far Out Financial
           </h1>
           <p className="font-poppins text-xl text-white/90 mb-8 drop-shadow-lg">
-            Catch the three bucket strategy wave to financial freedom
+            Catch the "Three Bucket Strategy" wave to financial freedom
           </p>
         </div>
 
         {/* Steps Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-5xl mx-auto">
           {[
-            { num: "1", title: "Learn", desc: "Understand the three bucket strategy and why it might be the best way for you to manage saving and investing for your future." },
-            { num: "2", title: "Apply", desc: "Put your knowledge into action and build your personal portfolio view. Gain deep insights into your curent financial situation." },
-            { num: "3", title: "Adjust", desc: "Fine-tune your savings and investment strategy and run simulations to see how different decisions could impact your future." },
-            { num: "4", title: "Automate", desc: "Let your money work for you. Build automations to ensure you're always on track and sticking to your plan. Sit back and relax." },
+            { num: "1", title: "Learn", desc: "Dive into the Three Bucket Strategy and discover why it might be the ultimate approach to managing your savings and investments. Surf through essential insights to set the foundation for a bright financial future." },
+            { num: "2", title: "Apply", desc: "Turn your newfound knowledge into action by building your personal portfolio view. Gain deep insights into your current financial situation and apply the Three Bucket Strategy to your own financial plan." },
+            { num: "3", title: "Adjust", desc: "Perfect your savings and investment strategy with ease. Run simulations and set goals to see how different decisions can ripple through your future, ensuring you stay on course for your financial dreams." },
+            { num: "4", title: "Automate", desc: "Set your finances to autopilot and watch your money work for you. Create seamless automations to keep you on track and sticking to your plan, so you can relax and enjoy the sunny vibes." },
           ].map((step) => (
             <div
               key={step.num}
@@ -76,7 +76,7 @@ export default function Home() {
               <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#ff7e45] to-[#2a9d8f] text-white text-lg font-bold mb-3">
                 {step.num}
               </div>
-              <h3 className="font-pacifico text-xl text-[#2a9d8f] mb-2">{step.title}</h3>
+              <h3 className="font-original-surfer text-xl text-[#2a9d8f] mb-2">{step.title}</h3>
               <p className="font-poppins text-sm text-[#2a9d8f]/70">{step.desc}</p>
             </div>
           ))}
@@ -85,7 +85,7 @@ export default function Home() {
         {/* Waitlist Section */}
         <div className="max-w-xl mx-auto">
           <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 text-center">
-            <h2 className="font-pacifico text-3xl text-[#2a9d8f] mb-4">
+            <h2 className="font-original-surfer text-3xl text-[#2a9d8f] mb-4">
               Ride the Wave Early
             </h2>
             <p className="font-poppins text-[#2a9d8f]/70 mb-6">

@@ -1,13 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Pacifico, Poppins } from 'next/font/google';
+import { Poppins, Original_Surfer } from 'next/font/google';
 import { Toaster } from "@/components/ui/sonner";
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
-const pacifico = Pacifico({ 
+const originalSurfer = Original_Surfer({ 
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-pacifico',
+  variable: '--font-original-surfer',
 });
 
 const poppins = Poppins({ 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
       </head>
-      <body className={`${pacifico.variable} ${poppins.variable} font-sans bg-[#f5e6d3]`}>
+      <body className={`${originalSurfer.variable} ${poppins.variable} font-sans bg-[#f5e6d3]`}>
         {children}
         <Toaster />
       </body>
