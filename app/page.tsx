@@ -108,6 +108,12 @@ export default function Home() {
               </Button>
             </form>
           </div>
+          <div className="text-center mt-8 text-white/90">
+            <div className="mr-4">Copyright © 2024 Far Out Financial LLC</div>
+            <a href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </main>
