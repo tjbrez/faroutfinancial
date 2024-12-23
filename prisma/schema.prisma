@@ -19,4 +19,6 @@ model User {
   stripeCustomerId String?
   subscriptionStatus String?
   subscriptionId     String?
+
+  @@map("users")
 }

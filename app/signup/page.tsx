@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { signIn } from "next-auth/react"; // Add this import
 
 export default function SignUp() {
   const searchParams = useSearchParams();
@@ -28,7 +29,18 @@ export default function SignUp() {
         throw new Error('Failed to create account');
       }
 
-      // Redirect to Stripe checkout
+      // Sign in the user
+      const result = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        throw new Error('Failed to sign in');
+      }
+
+      // Now that we're signed in, redirect to Stripe checkout
       const stripeResponse = await fetch('/api/stripe', {
         method: 'POST',
       });
