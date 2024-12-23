@@ -20,13 +20,16 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Far Out Financial | Modern Three Bucket Strategy',
+    default: 'Far Out Financial | Catch the "Three Bucket Strategy" wave to financial freedom',
     template: '%s | Far Out Financial'
   },
   description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy. Join our waitlist for early access.",
+  icons: {
+    icon: '/favicon.ico',
+  },
   keywords: ['financial planning', 'three bucket strategy', 'money management', 'retirement planning', 'personal finance'],
   openGraph: {
-    title: 'Far Out Financial | Modern Three Bucket Strategy',
+    title: 'Far Out Financial | Catch the "Three Bucket Strategy" wave to financial freedom',
     description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy.",
     url: 'https://faroutfinancial.com',
     siteName: 'Far Out Financial',
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Far Out Financial | Modern Three Bucket Strategy',
+    title: 'Far Out Financial | Catch the "Three Bucket Strategy" wave to financial freedom',
     description: "Simplify your financial journey with Far Out Financial's modern approach to the three bucket strategy.",
     images: ['https://faroutfinancial.com/images/background.jpg'],
   },
