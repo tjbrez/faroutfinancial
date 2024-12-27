@@ -23,3 +23,15 @@ model User {
 
   @@map("users")
 }
+
+model LeadCapture {
+  id        String   @id @default(cuid())
+  email     String
+  source    String   // 'waitlist' or 'signup'
+  createdAt DateTime @default(now())
+  lastAttempt DateTime @default(now())
+  attempts   Int     @default(1)
+
+  @@unique([email, source])
+  @@map("lead_captures")
+}
