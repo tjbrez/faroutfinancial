@@ -27,7 +27,7 @@ export default function Home() {
           },
           body: JSON.stringify({ email }),
         });
-
+  
         const data = await response.json();
         
         if (data.exists) {
@@ -38,19 +38,23 @@ export default function Home() {
           window.location.href = `/signup?email=${encodeURIComponent(email)}`;
         }
       } else {
-        // Existing waitlist logic
+        // Save to waitlist and send welcome email
         const response = await fetch('/api/waitlist', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ 
+            email,
+            source: 'waitlist',
+            sendEmail: true // Add flag to indicate email should be sent
+          }),
         });
-
+  
         if (!response.ok) {
           throw new Error('Failed to join waitlist');
         }
-
+  
         toast.success("Right on! You're on the waitlist!");
         setEmail("");
       }
