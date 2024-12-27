@@ -134,7 +134,7 @@ export default function Home() {
                 type="submit"
                 className="bg-[#ff7e45] hover:bg-[#ff7e45]/90 text-white font-poppins"
               >
-                {isApp ? 'Join Far Out Financial' : 'Join Waitlist'}
+                {isApp ? 'Get Started' : 'Join Waitlist'}
               </Button>
             </form>
             <p className="font-poppins text-[#777]/70 mt-6">
