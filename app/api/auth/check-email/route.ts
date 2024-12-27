@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   
       if (!user) {
         // Add to LeadCapture when email doesn't exist
-        await prisma.LeadCapture.upsert({
+        await prisma.leadCapture.upsert({
           where: {
             email_source: {
               email,
